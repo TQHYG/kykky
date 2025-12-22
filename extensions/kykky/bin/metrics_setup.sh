@@ -8,6 +8,7 @@ metric_enable()
 	mv /etc/syslog-ng/syslog-ng.conf $BASEDIR/etc/syslog-ng.conf.bak
 	cp $BASEDIR/etc/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf
 	mntroot ro
+	restart syslog
 	touch ./etc/enable
 }
 
@@ -18,6 +19,7 @@ metric_disable()
 	rm -f /etc/syslog-ng/syslog-ng.conf
 	cp $BASEDIR/etc/syslog-ng.conf.bak /etc/syslog-ng/syslog-ng.conf
 	mntroot ro
+	restart syslog
 	rm -f ./etc/enable
 }
 
