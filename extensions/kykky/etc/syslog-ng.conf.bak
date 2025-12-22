@@ -79,6 +79,18 @@ destination high_priority_metrics {
                 template("$MSG\n")                  
         );                                      
 };
+destination non_anonymous_clickstream_metrics {             
+        file("/var/log/non_anonymous_clickstream_metrics"   
+                template("$MSG\n")                  
+        );                                      
+};
+
+destination anonymous_clickstream_metrics {             
+        file("/var/log/anonymous_clickstream_metrics"   
+                template("$MSG\n")                  
+        );                                      
+};
+
 
 destination xconsole { pipe("/dev/xconsole"); };
 
@@ -114,14 +126,17 @@ filter f_netlog { match("wifid\\[") or match("cmd\\[") or match("wand\\["); };
 
 #Filter for wpa supplicant, dhcp and BSA Server logs
 filter f_wpa_supplicant { match("wpa_supplicant\\["); };
-filter f_dhcp { match("udhcpc\\["); };
+filter f_dhcp { match("udhcpc\\[") or match("odhcp6c\\["); };
 
 filter f_bsa_server { match("bsa_server:"); };
 
 # Filters for device metric logs
 filter f_metrics { ((facility(local7) and match("metric_generic")) or match("kernel_metric_generic")) and not match("==="); };
 filter f_high_priority_metrics { ((facility(local7) and match("metric_high_priority")) or match("kernel_metric_high_priority") and not match("===")); };
-filter f_not_metrics { not filter(f_metrics); };
+filter f_non_anonymous_clickstream_metrics { ((facility(local7) and match("non_anonymous_clickstream_metric") and match ("anonymous=false")) and not match("===")); };
+filter f_anonymous_clickstream_metrics { ((facility(local7) and match("anonymous_clickstream_metric") and match("anonymous=true")) and not match("===")); };
+
+filter f_not_metrics { not filter(f_metrics) and not filter(f_anonymous_clickstream_metrics) and not filter(f_non_anonymous_clickstream_metrics); };
 
 filter f_info { level(info); };
 filter f_notice { level(notice); };
@@ -160,8 +175,11 @@ log { source(src); filter(f_high_priority_metrics); destination(high_priority_me
 # Generic metrics logging
 log { source(src); filter(f_metrics); destination(metrics); };
 
+# Clickstream metrics logging for anonymous and non anonymous
+log { source(src); filter(f_non_anonymous_clickstream_metrics); destination(non_anonymous_clickstream_metrics); };
+log { source(src); filter(f_anonymous_clickstream_metrics); destination(anonymous_clickstream_metrics); };
+
 ## If you want all CVM messages to go into
 ## /var/log/cvm in addition to /var/log/messages,
 ## uncomment the following line
 #log { source(src); filter(f_cvm); destination(cvm); };
-
