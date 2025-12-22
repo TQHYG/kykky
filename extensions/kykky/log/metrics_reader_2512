@@ -1,4 +1,0 @@
-appmgrd[2538]: metric_generic,1766377063,timer,appmgrd,logAppActiveDuration,com.lab126.booklet.reader.activeDuration,154522
-appmgrd[2538]: metric_generic,1766382952,timer,appmgrd,logAppActiveDuration,com.lab126.booklet.reader.activeDuration,454617
-appmgrd[2538]: metric_generic,1766386396,timer,appmgrd,logAppActiveDuration,com.lab126.booklet.reader.activeDuration,1050160
-appmgrd[2538]: metric_generic,1766386691,timer,appmgrd,logAppActiveDuration,com.lab126.booklet.reader.activeDuration,244166
