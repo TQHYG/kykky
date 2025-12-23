@@ -63,11 +63,9 @@ Know your kindle, Know Yourself---a kindle plugin to record your reading statist
 
 # 截图
 
-<img src="https://github.com/TQHYG/kykky/raw/master/screenshots/screenshot1.png" height="400px">
-<img src="https://github.com/TQHYG/kykky/raw/master/screenshots/screenshot2.png" height="400px">
+<img src="https://github.com/TQHYG/kykky/raw/master/screenshots/screenshot1.png" height="400px"><img src="https://github.com/TQHYG/kykky/raw/master/screenshots/screenshot2.png" height="400px">
 
-<img src="https://github.com/TQHYG/kykky/raw/master/screenshots/screenshot3.png" height="400px">
-<img src="https://github.com/TQHYG/kykky/raw/master/screenshots/screenshot4.png" height="400px">
+<img src="https://github.com/TQHYG/kykky/raw/master/screenshots/screenshot3.png" height="400px"><img src="https://github.com/TQHYG/kykky/raw/master/screenshots/screenshot4.png" height="400px">
 
 
 # ACKNOWLEDGEMENT
