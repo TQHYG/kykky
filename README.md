@@ -17,7 +17,7 @@ Know your kindle, Know Yourself---a kindle plugin to record your reading statist
 
 # 截图
 
-<img src="https://github.com/TQHYG/kykky/raw/master/screenshots/show_time.png" height="500px">
+<img src="https://github.com/TQHYG/kykky/raw/fbink-only/screenshots/show_time.png" height="500px">
 
 # TODO
 也许可以把它做成gtk应用，提供更完整的月统计视图（遥遥无期）
