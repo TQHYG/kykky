@@ -1,46 +1,68 @@
 {
 	"items": [
 	{
-		"name": "Read阅读统计",
+    	"name": "Read查看阅读统计",
+		"if": "\"/mnt/us/extensions/kykky/bin/kindle-reading-gtk\"  -f",
+    	"action": "./bin/kindle-reading-gtk",
+    	"exitmenu": true,
+    	"refresh": false,
+    	"internal": "查看阅读统计"			
+    },
+	{
+    	"name": "主程序没有安装，仅能使用fbink模式",
+		"if": "\"/mnt/us/extensions/kykky/bin/kindle-reading-gtk\"  -f!",
+    	"action": "eips 10 1 'Check https://github.com/TQHYG/kykky for details.'",
+    	"exitmenu": true,
+    	"refresh": false,
+    	"internal": "查看阅读统计"			
+    },
+	{
+		"name": "Helper小工具",
 		"priority": -998,
-		"items": [		
-		{
-			"name": "查看阅读统计",
-			"action": "./bin/metrics.sh",
-			"exitmenu": false,
-			"refresh": false,
-			"internal": "查看阅读统计"			
-		},
-		{
-			"name": "开启阅读统计",
-			"if": "\"/mnt/us/extensions/kykky/etc/enable\"  -f!",
-			"action": "./bin/metrics_setup.sh",
-			"params": "enable",
-			"exitmenu": false,
-			"refresh": true,
-			"status": false,
-			"internal": "开启阅读统计"
-		},
-		{
-			"name": "禁用阅读统计",
-			"if": "\"/mnt/us/extensions/kykky/etc/enable\"  -f",
-			"action": "./bin/metrics_setup.sh",
-			"params": "disable",
-			"exitmenu": false,
-			"refresh": true,
-			"status": false,
-			"internal": "关闭阅读统计"
-		},
-		{
-			"name": "清除统计记录",
-			"action": "./bin/metrics_setup.sh",
-			"params": "reset",
-			"exitmenu": false,
-			"refresh": false,
-			"status": false,
-			"internal": "清除统计记录"
-		}
-		]
+    	"items": [
+    	{
+    		"name": "阅读统计设置",
+    		"priority": -998,
+    		"items": [		
+    		{
+    			"name": "查看阅读统计（Fbink）",
+    			"action": "./bin/metrics.sh",
+    			"exitmenu": false,
+    			"refresh": false,
+    			"internal": "查看阅读统计"			
+    		},
+    		{
+    			"name": "开启阅读统计",
+    			"if": "\"/mnt/us/extensions/kykky/etc/enable\"  -f!",
+    			"action": "./bin/metrics_setup.sh",
+    			"params": "enable",
+    			"exitmenu": false,
+    			"refresh": true,
+    			"status": false,
+    			"internal": "开启阅读统计"
+    		},
+    		{
+    			"name": "禁用阅读统计",
+    			"if": "\"/mnt/us/extensions/kykky/etc/enable\"  -f",
+    			"action": "./bin/metrics_setup.sh",
+    			"params": "disable",
+    			"exitmenu": false,
+    			"refresh": true,
+    			"status": false,
+    			"internal": "关闭阅读统计"
+    		},
+    		{
+    			"name": "清除统计记录",
+    			"action": "./bin/metrics_setup.sh",
+    			"params": "reset",
+    			"exitmenu": false,
+    			"refresh": false,
+    			"status": false,
+    			"internal": "清除统计记录"
+    		}
+    		]
+    	}
+    	]
 	}
 	]
 }
