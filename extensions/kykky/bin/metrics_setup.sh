@@ -37,12 +37,15 @@ metric_reset()
 ## Main
 case "$1" in
 	"enable" )
+		echo "Enable Kykky..."
 		metric_enable
 	;;
 	"disable" )
+		echo "Disable Kykky..."
 		metric_disable
 	;;
 	"reset" )
+		echo "Cleaning Kykky Data..."
 		metric_reset
 	;;
 	* )

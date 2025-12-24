@@ -33,8 +33,8 @@ Know your kindle, Know Yourself---a kindle plugin to record your reading statist
 4. 点击“开启阅读统计”，可能需要重启，插件内数据可能不会及时刷新，耐心等待即可。
 5. 以下步骤用于安装主程序的二进制文件（适用于0.2版本）
 6. 前往 https://github.com/TQHYG/kindle-reading-gtk/releases 界面，根据 Release 界面上的说明下载
-   + 固件版本低于 5.16.3 请下载 kindle-reading-gtk_pw2 ，这个版本是armel
-   + 固件版本高于 5.16.3 请下载 kindle-reading-gtk_hf ，这个版本是armhf
+   + 固件版本低于 5.16.3 请下载 kindle-reading-gtk_kindlepw2 ，这个版本是armel
+   + 固件版本高于 5.16.3 请下载 kindle-reading-gtk_kindlehf ，这个版本是armhf
 7. 将下载下来的文件重命名成 kindle-reading-gtk ，注意文件名不要有后缀
 8. 把下载下来的文件放到插件目录下的bin目录中（ extensions/kykky/bin/ ）
 
