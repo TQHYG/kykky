@@ -1,5 +1,13 @@
 #!/bin/bash
+
 BASEDIR=/mnt/us/extensions/kykky
+
+# 判断第一个参数是否等于 "gui"
+if [[ "$1" == "gui" ]]; then
+	usleep 800000
+    exec "$BASEDIR/bin/kindle-reading-gtk"
+fi
+
 TOTAL=0
 YESTERDAY=0
 TODAY=0

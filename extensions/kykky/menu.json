@@ -3,7 +3,7 @@
 	{
     	"name": "Read查看阅读统计",
 		"if": "\"/mnt/us/extensions/kykky/bin/kindle-reading-gtk\"  -f",
-    	"action": "./bin/kindle-reading-gtk",
+    	"action": "./bin/metrics.sh gui",
     	"exitmenu": true,
     	"refresh": false,
     	"internal": "查看阅读统计"			
