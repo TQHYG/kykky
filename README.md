@@ -26,6 +26,8 @@ Know your kindle, Know Yourself---a kindle plugin to record your reading statist
 
 相近的系统版本应当都可用，请自行测试，如果不起作用，只有禁用插件并删除即可，没有副作用。
 
+安装时务必使用**原始插件目录名称**（kykky）！目前没有兼容自定义插件目录名称！
+
 # 安装
 1. 给你的Kindle越狱 [中文](https://kindlefere.com/post/410.html) & [English](http://www.mobileread.com/forums/showthread.php?t=275877)
 2. 安装 KUAL[中文](https://kindlefere.com/post/311.html)
